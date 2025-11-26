@@ -1,1280 +1,956 @@
-# Insulator Condition Detection System - Complete Documentation
+# 🥗 Nutrition Deficiency Detector - Comprehensive Documentation
 
-## 📋 Project Summary
+<div align="center">
 
-**Project Name:** AI-Powered Insulator Condition Detection System  
-**Version:** 2.0  
-**Platform:** Mobile (Android) + Backend (Flask)  
-**AI Model:** OpenAI CLIP (Vision-Language Model)  
-**Purpose:** Automated detection and classification of electrical insulator conditions using computer vision and deep learning
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Flutter](https://img.shields.io/badge/Flutter-3.9.2+-02569B?logo=flutter)
+![Platform](https://img.shields.io/badge/platform-Android%20%7C%20iOS%20%7C%20Web%20%7C%20Windows-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
----
+**An AI-powered nutrition and health tracking app with AR features, voice interaction, and personalized diet planning**
 
-## 🎯 Project Overview
+[Features](#-features) • [Architecture](#-architecture) • [Installation](#-installation) • [Flow Diagrams](#-flow-diagrams) • [API Integration](#-api-integration)
 
-The Insulator Condition Detection System is an end-to-end AI solution designed to automatically analyze electrical insulators and determine whether they are **healthy** or **damaged**. The system combines a Flutter-based mobile application with a Python Flask backend powered by state-of-the-art CLIP (Contrastive Language-Image Pre-training) model for accurate condition assessment.
-
-### Key Capabilities:
-- ✅ Real-time insulator condition analysis
-- ✅ Image capture via camera or gallery upload
-- ✅ AI-powered classification (Healthy vs Damaged)
-- ✅ Confidence scoring with detailed analytics
-- ✅ Comprehensive damage cause identification
-- ✅ Professional UI/UX with smooth animations
-- ✅ Network-enabled analysis (WiFi/LAN connectivity)
+</div>
 
 ---
 
-## 🏗️ System Architecture
+## 📋 Table of Contents
 
-### High-Level Architecture
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Technology Stack](#-technology-stack)
+- [Architecture](#-architecture)
+- [Feature Details](#-feature-details)
+- [Flow Diagrams](#-flow-diagrams)
+- [Database Schema](#-database-schema)
+- [API Integration](#-api-integration)
+- [Installation Guide](#-installation-guide)
+- [Usage Guide](#-usage-guide)
+- [Screenshots](#-screenshots)
+
+---
+
+## 🌟 Overview
+
+The **Nutrition Deficiency Detector** is a comprehensive health and nutrition tracking application that uses artificial intelligence, computer vision, and augmented reality to help users identify nutritional deficiencies, track their diet, and receive personalized health recommendations.
+
+### Core Capabilities
+
+- 🔍 **Visual Deficiency Detection**: Analyze tongue, lips, nails, and eyes for health indicators
+- 🍽️ **AI Food Analysis**: Identify foods and calculate nutritional content using Groq Vision AI
+- 🎤 **Voice Meal Logging**: Speak your meals for instant nutritional analysis
+- 📊 **Progress Tracking**: Monitor deficiency improvements over time with charts
+- 🤖 **AI Chatbot**: Get personalized nutrition advice from AI doctor
+- 📱 **AR Features**: Immersive augmented reality health visualization
+- 📄 **PDF Reports**: Generate comprehensive health reports for doctors
+
+---
+
+## 🚀 Key Features
+
+### 1. **Visual Deficiency Detection System**
+- Multi-image analysis (tongue, lips, nails, eyes)
+- AI-powered symptom recognition using HuggingFace models
+- Real-time confidence scoring
+- Detailed deficiency explanations
+- Severity classification (Normal, Mild, Moderate, Severe)
+
+**Detected Deficiencies:**
+- Iron, Vitamin B1, B2, B3, B6, B12
+- Vitamin A, C, D, E, K
+- Calcium, Zinc, Magnesium
+- Biotin (B7), Folate (B9)
+
+### 2. **🧠 AR Food Analyzer**
+- Real-time camera-based food scanning
+- Groq Vision AI (Llama 4 Scout) for food recognition
+- AR overlays with floating nutrition labels
+- Live scanning mode with continuous analysis
+- 3D animations and visual effects
+- Health scoring (0-100) for meals
+- Portion estimation
+- Macro & micronutrient breakdown
+
+### 3. **🎤 Voice Meal Logger**
+- Speech-to-text meal input
+- AI food identification from natural language
+- Text-to-speech feedback
+- Automatic nutritional analysis
+- Database storage for tracking
+
+### 4. **📊 Progress Dashboard**
+- Interactive charts showing deficiency trends
+- Weekly/monthly progress views
+- Improvement percentages
+- Meal recovery score tracking
+- Visual health timeline
+
+### 5. **🤖 AI Nutrition Chatbot**
+- Powered by Groq AI (Llama 3.3 70B) or Google Gemini
+- Context-aware responses based on user deficiencies
+- Personalized diet recommendations
+- Recipe suggestions
+- Health Q&A with medical knowledge
+
+### 6. **📱 Barcode Scanner**
+- Scan packaged food products
+- Fetch nutritional information from Open Food Facts API
+- Allergen warnings
+- Nutritional grade (A-E)
+- Ingredient analysis
+
+### 7. **🗺️ Geo-Location Food Recommendations**
+- Location-based food suggestions
+- Regional cuisine integration
+- Local restaurant recommendations
+- Seasonal food availability
+
+### 8. **🍲 Meal Quality Detector**
+- Food freshness analysis
+- Oil content detection
+- Color and texture analysis
+- Quality scoring
+
+### 9. **👤 Health Avatar System**
+- Gamified health tracking
+- Achievement badges
+- Level progression
+- Streak tracking
+- Visual health representation
+
+### 10. **📊 Meal Correlation Engine**
+- Tracks which foods improve specific deficiencies
+- ML-based correlation analysis
+- Confidence scoring for food effectiveness
+- 90-day historical analysis
+
+### 11. **📈 Timeline Progress Tracker**
+- Day-by-day deficiency severity tracking
+- Visual trend lines
+- Risk score calculations
+- Improvement indicators
+
+### 12. **📄 Smart Report Generator**
+- PDF export with charts and data
+- Doctor-shareable format
+- Weekly improvement summaries
+- Meal history logs
+- QR code for quick access
+
+### 13. **👨‍⚕️ Symptom Checker**
+- Interactive symptom input
+- AI-based deficiency prediction
+- Severity assessment
+- Recommended tests
+
+### 14. **🎯 Personalized Diet Planner**
+- Weekly meal plans
+- Age-specific recommendations
+- BMI-based calorie calculations
+- South Indian cuisine focus
+- Deficiency-targeted meals
+
+### 15. **👤 User Profile Management**
+- BMI calculation
+- Age group selection
+- Health goal tracking
+- Preference settings
+
+### 16. **🎭 Advanced AR Features**
+- AR Health Capture Coach
+- Diagnostic Heatmap Overlay
+- Deficiency Simulation Preview
+- 3D Food Recommendations
+- AR Nutrient Plate Builder
+- Progress Timeline AR
+- Skin Tone Normalization
+- Hydration Estimator
+- Voice Interactive Doctor
+- Prescription Planner
+
+---
+
+## 💻 Technology Stack
+
+### Frontend Framework
+- **Flutter 3.9.2+** - Cross-platform UI development
+- **Material Design 3** - Modern UI components
+- **Flutter Animate** - Smooth animations
+
+### AI & ML Services
+- **Groq AI API**
+  - Llama 4 Scout (Vision model for food recognition)
+  - Llama 3.3 70B Versatile (Chatbot, text analysis)
+  - Llama 3.1 8B Instant (Fast queries)
+- **Google Gemini AI** - Alternative chatbot provider
+- **HuggingFace Models** - Image classification for symptoms
+
+### Database
+- **SQLite** (via sqflite) - Local data storage
+- **sqflite_common_ffi** - Desktop platform support
+- **Shared Preferences** - Settings and cache
+
+### Imaging & Camera
+- **camera** - Real-time camera access
+- **image_picker** - Gallery image selection
+- **file_picker** - File system access
+- **image** package - Image processing and compression
+
+### Speech & Voice
+- **speech_to_text** - Voice meal input
+- **flutter_tts** - Text-to-speech feedback
+
+### Charts & Visualization
+- **fl_chart** - Beautiful charts and graphs
+- **pdf** - PDF generation
+- **printing** - PDF preview and sharing
+
+### AR Features
+- **camera** - AR camera overlay
+- **sensors_plus** - Device motion tracking
+- Custom AR implementations
+
+### Location Services
+- **geolocator** - GPS location access
+- **geocoding** - Address resolution
+
+### Barcode Scanning
+- **mobile_scanner** - Fast QR/barcode scanning
+- **Open Food Facts API** - Product database
+
+### Networking
+- **http** - REST API calls
+- **connectivity_plus** - Network status
+
+### Storage & Utilities
+- **path_provider** - File system paths
+- **intl** - Date/time formatting
+- **uuid** - Unique ID generation
+
+---
+
+## 🏗️ Architecture
+
+### Project Structure
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    MOBILE APPLICATION                        │
-│                      (Flutter/Dart)                          │
-│  ┌────────────┐  ┌────────────┐  ┌──────────────────┐      │
-│  │  Upload    │→ │ Analyzing  │→ │  Result Display  │      │
-│  │  Screen    │  │  Screen    │  │  with Causes     │      │
-│  └────────────┘  └────────────┘  └──────────────────┘      │
-│         │                                   ▲                │
-│         │ HTTP POST /api/analyze            │                │
-│         │ (multipart/form-data)             │ JSON Response  │
-└─────────┼───────────────────────────────────┼────────────────┘
-          │                                   │
-          │        WiFi/LAN Network           │
-          ▼                                   │
-┌─────────────────────────────────────────────────────────────┐
-│                    BACKEND SERVER                            │
-│                    (Flask - Python)                          │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │              Flask API Server                        │   │
-│  │  • GET  /           → Web Interface                  │   │
-│  │  • POST /api/analyze → Mobile API Endpoint           │   │
-│  └──────────────────────────────────────────────────────┘   │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │           Image Processing Pipeline                   │   │
-│  │  1. Receive image → 2. Resize (224×224)              │   │
-│  │  3. Enhance contrast → 4. Compute edge density       │   │
-│  └──────────────────────────────────────────────────────┘   │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │              AI Inference Engine                      │   │
-│  │  ┌─────────────────────────────────────────────┐     │   │
-│  │  │    CLIP Model (openai/clip-vit-base-patch32)│     │   │
-│  │  │  • Vision Encoder: ViT-B/32                 │     │   │
-│  │  │  • Text Encoder: Transformer                │     │   │
-│  │  │  • Embedding: 512-dimensional space         │     │   │
-│  │  └─────────────────────────────────────────────┘     │   │
-│  │  ┌─────────────────────────────────────────────┐     │   │
-│  │  │    Edge Detection (OpenCV Canny)            │     │   │
-│  │  │  • Adaptive thresholding                    │     │   │
-│  │  │  • Edge density computation                 │     │   │
-│  │  └─────────────────────────────────────────────┘     │   │
-│  └──────────────────────────────────────────────────────┘   │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │         Ensemble Decision Algorithm                   │   │
-│  │  Combined Score = 60% CLIP + 40% Edge Density       │   │
-│  │  Threshold: > 0.5 → Damaged, ≤ 0.5 → Healthy        │   │
-│  └──────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────┘
+lib/
+├── main.dart                          # App entry point & landing page
+├── models/                            # Data models
+│   ├── health_data.dart              # Deficiency, Meal, Food models
+│   ├── user_profile.dart             # User data model
+│   └── deficiency_knowledge.dart     # Symptom-deficiency mappings
+├── pages/                            # UI screens
+│   ├── ai_chatbot_page.dart          # AI nutrition assistant
+│   ├── ar_food_analyzer_page.dart    # AR food scanning
+│   ├── ar_features_page.dart         # AR features hub
+│   ├── barcode_scanner_page.dart     # Product scanner
+│   ├── deficiency_explanation_page.dart
+│   ├── food_analyzer_page.dart       # Image-based food analysis
+│   ├── geo_food_recommendations_page.dart
+│   ├── health_avatar_page.dart       # Gamification
+│   ├── meal_correlation_page.dart    # Food impact analysis
+│   ├── meal_quality_detector_page.dart
+│   ├── nutrition_report_page.dart    # PDF reports
+│   ├── personalized_diet_plan_page.dart
+│   ├── progress_dashboard_page.dart  # Charts & trends
+│   ├── symptom_input_page.dart       # Manual symptom entry
+│   ├── timeline_progress_page.dart   # Historical tracking
+│   ├── user_profile_page.dart        # Profile management
+│   ├── voice_meal_logger_page.dart   # Voice input
+│   └── ar/                           # AR feature modules
+│       ├── ar_health_capture_coach.dart
+│       ├── diagnostic_heatmap.dart
+│       ├── deficiency_simulation.dart
+│       └── ... (10+ AR features)
+├── services/                         # Business logic
+│   ├── health_database.dart          # SQLite operations
+│   ├── deficiency_info_service.dart  # Deficiency data
+│   └── nutrient_service.dart         # Nutrition calculations
+└── utils/                            # Helper functions
+    └── south_indian_diet_planner.dart
+```
+
+### Design Patterns
+
+1. **BLoC Pattern** - For complex state management
+2. **Repository Pattern** - Data access abstraction
+3. **Service Layer** - Business logic separation
+4. **Singleton Pattern** - Database instance
+5. **Factory Pattern** - Model creation
+
+---
+
+## 📖 Feature Details
+
+### 1. Visual Deficiency Detection
+
+**Flow:**
+```
+User Selects Images (Tongue/Lips/Nails/Eyes)
+    ↓
+Images Compressed & Encoded to Base64
+    ↓
+Sent to HuggingFace MobileNet V2 API
+    ↓
+Features Extracted from Images
+    ↓
+Mapped to Deficiency Knowledge Base
+    ↓
+Confidence Scores Calculated
+    ↓
+Severity Level Assigned
+    ↓
+Results Displayed with Recommendations
+    ↓
+Saved to Local Database
+```
+
+**Deficiency Mappings:**
+
+| Body Part | Visual Indicator | Deficiencies |
+|-----------|-----------------|--------------|
+| **Tongue** | Smooth texture | B6, B12, Iron |
+| | Red color | B12, Iron |
+| | White patches | B2, B3, B12 |
+| | Mouth ulcers | B12 |
+| **Lips** | Cracked | B1, B2, B3, B6 |
+| | Shiny red | B2, B3 |
+| | Angular cheilosis | B1, B2, B3, Iron |
+| **Nails** | Spoon-shaped | C, B7, B9 |
+| | White spots | Calcium, Zinc, B7 |
+| | Brittle/cracked | A, C, B7, B12 |
+| | Vertical ridges | Magnesium, Iron, B7 |
+| **Eyes** | Redness | A, B, B2, B6 |
+
+### 2. AR Food Analyzer
+
+**Technical Implementation:**
+- Real-time camera preview using `camera` package
+- Groq Vision API integration with Llama 4 Scout model
+- Image compression to <500KB for API limits
+- AR overlay rendering with custom painters
+- 3D transform animations for floating labels
+- Staggered grid layout for food labels (2-column)
+- Semi-transparent background scrim for visibility
+- Live scanning mode with 3-second intervals
+- Health scoring algorithm based on macros
+
+**Features:**
+- **Capture Mode**: Take photo → analyze → show results
+- **Live Mode**: Continuous scanning every 3 seconds
+- **AR Labels**: Floating cards with food name, nutrients, health tags
+- **Animations**: Pulse effects, 3D rotations, scan lines
+- **Health Score**: 0-100 based on protein, fiber, fats, calories
+- **Recovery Score**: Targeted to user's deficiencies
+
+### 3. Voice Meal Logger
+
+**Speech Recognition Flow:**
+```
+User Taps Microphone
+    ↓
+Speech-to-Text Starts (speech_to_text)
+    ↓
+User Speaks: "I ate dosa with chutney"
+    ↓
+Text Captured
+    ↓
+Sent to Groq AI (Llama 3.3 70B)
+    ↓
+AI Extracts Food Items & Nutrition
+    ↓
+JSON Response Parsed
+    ↓
+Foods & Nutrients Displayed
+    ↓
+TTS Speaks Summary (flutter_tts)
+    ↓
+Saved to Database
+```
+
+**Supported Languages:** English (extensible)
+
+### 4. AI Chatbot
+
+**Conversation Flow:**
+```
+User Types Question
+    ↓
+Context Loaded (User's Deficiencies)
+    ↓
+System Prompt Prepared (Nutrition Doctor)
+    ↓
+Sent to Groq AI / Gemini
+    ↓
+Streamed Response Received
+    ↓
+Displayed in Chat Bubble
+    ↓
+Conversation History Maintained
+```
+
+**Capabilities:**
+- Personalized based on detected deficiencies
+- Recipe recommendations
+- Meal planning advice
+- Symptom interpretation
+- Supplement guidance
+- Diet Q&A
+
+### 5. Meal Correlation Engine
+
+**Algorithm:**
+```
+1. Fetch 90 days of deficiency records
+2. Fetch 90 days of meal records
+3. For each meal:
+   - Find deficiency level BEFORE meal
+   - Find deficiency level AFTER meal (within 3 days)
+   - Calculate improvement = before_severity - after_severity
+   - If improvement > 0:
+     * Add to correlation score for that food
+     * Increment occurrence counter
+     * Update confidence level
+4. Sort foods by improvement score
+5. Display top 10 correlations
+```
+
+**Output:** Foods that most effectively improve specific deficiencies
+
+---
+
+## 🔄 Flow Diagrams
+
+### Main Application Flow
+
+```
+┌─────────────────┐
+│  Landing Page   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Symptom Input  │ ──────┐
+│   (4 Images)    │       │
+└────────┬────────┘       │
+         │                │
+         ▼                │
+┌─────────────────┐       │
+│  AI Analysis    │       │
+│  (HuggingFace)  │       │
+└────────┬────────┘       │
+         │                │
+         ▼                │
+┌─────────────────┐       │
+│   Deficiency    │       │
+│   Results       │ ◄─────┘
+└────────┬────────┘
+         │
+         ├────────────────────────────────┐
+         │                                │
+         ▼                                ▼
+┌─────────────────┐              ┌──────────────┐
+│  Feature Menu   │              │  Dashboard   │
+└────────┬────────┘              └──────────────┘
+         │
+         ├──► Food Analyzer ──► Meal Record ──► Database
+         │
+         ├──► AR Food Scanner ──► Live Analysis
+         │
+         ├──► Voice Logger ──► Speech-to-Text ──► AI Analysis
+         │
+         ├──► AI Chatbot ──► Groq/Gemini ──► Advice
+         │
+         ├──► Progress Charts ──► SQLite ──► Visualizations
+         │
+         ├──► Meal Correlation ──► ML Analysis ──► Insights
+         │
+         ├──► Report Generator ──► PDF Export
+         │
+         ├──► Barcode Scanner ──► API Lookup
+         │
+         └──► Profile & Settings
+```
+
+### Food Analysis Flow
+
+```
+┌──────────────┐
+│ Select Image │ ──┐
+│  or Camera   │   │
+└──────────────┘   │
+                   ▼
+          ┌────────────────┐
+          │ Image Selected │
+          └────────┬───────┘
+                   │
+          ┌────────▼───────────┐
+          │ Compress < 500KB   │
+          │ (image package)    │
+          └────────┬───────────┘
+                   │
+          ┌────────▼────────────┐
+          │ Convert to Base64   │
+          └────────┬────────────┘
+                   │
+          ┌────────▼────────────────┐
+          │ Send to Groq Vision API │
+          │ (Llama 4 Scout Model)   │
+          └────────┬────────────────┘
+                   │
+          ┌────────▼─────────┐
+          │ Parse JSON       │
+          │ Extract Foods    │
+          └────────┬─────────┘
+                   │
+          ┌────────▼──────────┐
+          │ Calculate Totals  │
+          │ & Recovery Score  │
+          └────────┬──────────┘
+                   │
+          ┌────────▼──────────┐
+          │ Display Results   │
+          │ with AR Overlay   │
+          └────────┬──────────┘
+                   │
+          ┌────────▼──────────┐
+          │ Save to Database  │
+          └───────────────────┘
+```
+
+### Database Schema Flow
+
+```
+┌──────────────────┐
+│ health_database  │
+└────────┬─────────┘
+         │
+         ├──► deficiencies
+         │     ├─ id (TEXT PRIMARY KEY)
+         │     ├─ detectedAt (INTEGER)
+         │     ├─ bodyPart (TEXT)
+         │     ├─ nutrient (TEXT)
+         │     ├─ severity (TEXT)
+         │     ├─ confidence (REAL)
+         │     └─ imagePath (TEXT)
+         │
+         ├──► meals
+         │     ├─ id (TEXT PRIMARY KEY)
+         │     ├─ consumedAt (INTEGER)
+         │     ├─ foods (TEXT JSON)
+         │     ├─ recoveryScore (INTEGER)
+         │     ├─ feedbackMessage (TEXT)
+         │     └─ imagePath (TEXT)
+         │
+         └──► progress_tracking
+               ├─ id (TEXT PRIMARY KEY)
+               ├─ date (INTEGER)
+               ├─ nutrient (TEXT)
+               ├─ score (REAL)
+               └─ notes (TEXT)
+```
+
+### AI Integration Architecture
+
+```
+                    ┌─────────────────┐
+                    │  Flutter App    │
+                    └────────┬────────┘
+                             │
+           ┌─────────────────┼─────────────────┐
+           │                 │                 │
+           ▼                 ▼                 ▼
+    ┌─────────────┐   ┌─────────────┐  ┌─────────────┐
+    │  Groq API   │   │ Gemini API  │  │ HuggingFace │
+    └──────┬──────┘   └──────┬──────┘  └──────┬──────┘
+           │                 │                 │
+           ├─ Vision         ├─ Chatbot       └─ Vision
+           │  (Llama 4       │  (Gemini 2.0      (MobileNet)
+           │   Scout)        │   Flash)
+           │                 │
+           ├─ Chatbot        └─ Context-aware
+           │  (Llama 3.3)       responses
+           │
+           └─ Fast queries
+              (Llama 3.1)
 ```
 
 ---
 
-## 🔄 System Flow Diagram
+## 🗄️ Database Schema
 
-### Complete Analysis Workflow
+### Tables
 
+#### 1. deficiencies
+```sql
+CREATE TABLE deficiencies (
+  id TEXT PRIMARY KEY,
+  detectedAt INTEGER NOT NULL,
+  bodyPart TEXT NOT NULL,
+  nutrient TEXT NOT NULL,
+  severity TEXT NOT NULL,  -- 'normal', 'mild', 'moderate', 'severe'
+  confidence REAL NOT NULL,
+  imagePath TEXT,
+  symptoms TEXT
+);
 ```
-                        ┌─────────────────────┐
-                        │   USER LAUNCHES     │
-                        │   MOBILE APP        │
-                        └──────────┬──────────┘
-                                   │
-                        ┌──────────▼──────────┐
-                        │  UPLOAD SCREEN      │
-                        │  • Camera Capture   │
-                        │  • Gallery Selection│
-                        └──────────┬──────────┘
-                                   │
-                    ┌──────────────┴──────────────┐
-                    │                             │
-         ┌──────────▼──────────┐      ┌──────────▼──────────┐
-         │  CAPTURE FROM       │      │  SELECT FROM        │
-         │  CAMERA             │      │  GALLERY            │
-         └──────────┬──────────┘      └──────────┬──────────┘
-                    │                             │
-                    └──────────────┬──────────────┘
-                                   │
-                        ┌──────────▼──────────┐
-                        │  IMAGE SELECTED     │
-                        │  Display Preview    │
-                        └──────────┬──────────┘
-                                   │
-                        ┌──────────▼──────────┐
-                        │  USER CLICKS        │
-                        │  "Analyze Condition"│
-                        └──────────┬──────────┘
-                                   │
-                        ┌──────────▼──────────┐
-                        │  ANALYZING SCREEN   │
-                        │  • Loading Animation│
-                        │  • "Analyzing..."   │
-                        └──────────┬──────────┘
-                                   │
-                        ┌──────────▼──────────────────────┐
-                        │  HTTP POST REQUEST              │
-                        │  To: http://SERVER_IP:5000      │
-                        │  Endpoint: /api/analyze         │
-                        │  Method: multipart/form-data    │
-                        │  Body: image file               │
-                        └──────────┬──────────────────────┘
-                                   │
-                        ┌──────────▼──────────────────────┐
-                        │    FLASK SERVER RECEIVES        │
-                        │    • Validates file exists      │
-                        │    • Saves to uploads/          │
-                        └──────────┬──────────────────────┘
-                                   │
-                        ┌──────────▼──────────────────────┐
-                        │  IMAGE PREPROCESSING            │
-                        │  1. Load image with PIL         │
-                        │  2. Convert to RGB              │
-                        │  3. Resize to 224×224           │
-                        │  4. Enhance contrast (α=1.2)    │
-                        │  5. Brightness boost (β=10)     │
-                        └──────────┬──────────────────────┘
-                                   │
-                ┌──────────────────┴──────────────────┐
-                │                                     │
-   ┌────────────▼────────────┐          ┌────────────▼────────────┐
-   │  CLIP INFERENCE         │          │  EDGE ANALYSIS          │
-   │  1. Tokenize texts:     │          │  1. Canny edge detect   │
-   │     • "healthy..."      │          │  2. Count edge pixels   │
-   │     • "damaged..."      │          │  3. Calculate density   │
-   │  2. Encode image (ViT)  │          │  4. Normalize score     │
-   │  3. Compute similarity  │          │     (vs calibration)    │
-   │  4. Softmax → probs     │          │                         │
-   │  Result: [H%, D%]       │          │  Result: edge_score     │
-   └────────────┬────────────┘          └────────────┬────────────┘
-                │                                     │
-                └──────────────┬──────────────────────┘
-                               │
-                    ┌──────────▼──────────────────────┐
-                    │  ENSEMBLE DECISION              │
-                    │  combined_score =               │
-                    │    0.6 × damaged_prob +         │
-                    │    0.4 × edge_score             │
-                    │                                 │
-                    │  IF combined_score > 0.5:       │
-                    │    → DAMAGED                    │
-                    │  ELSE:                          │
-                    │    → HEALTHY                    │
-                    └──────────┬──────────────────────┘
-                               │
-                    ┌──────────▼──────────────────────┐
-                    │  BUILD JSON RESPONSE            │
-                    │  {                              │
-                    │    success: true,               │
-                    │    is_healthy: bool,            │
-                    │    is_damaged: bool,            │
-                    │    confidence: float,           │
-                    │    message: string,             │
-                    │    details: {...}               │
-                    │  }                              │
-                    └──────────┬──────────────────────┘
-                               │
-                    ┌──────────▼──────────────────────┐
-                    │  HTTP 200 OK RESPONSE           │
-                    │  Content-Type: application/json │
-                    └──────────┬──────────────────────┘
-                               │
-                    ┌──────────▼──────────────────────┐
-                    │  MOBILE APP PARSES JSON         │
-                    │  • Extract is_healthy           │
-                    │  • Extract confidence           │
-                    │  • Extract message              │
-                    └──────────┬──────────────────────┘
-                               │
-                    ┌──────────▼──────────────────────┐
-                    │  RESULT SCREEN DISPLAY          │
-                    │  ┌──────────────────────────┐   │
-                    │  │ • Insulator Image        │   │
-                    │  │ • Animated Status Icon   │   │
-                    │  │   ✓ Green (Healthy)      │   │
-                    │  │   ⚠ Red (Damaged)        │   │
-                    │  │ • Title (32px bold)      │   │
-                    │  │ • Confidence Badge       │   │
-                    │  │   (36px percentage)      │   │
-                    │  │ • Analysis Message       │   │
-                    │  │                          │   │
-                    │  │ IF DAMAGED:              │   │
-                    │  │ • Damage Causes Section  │   │
-                    │  │   ⚡ Electrical Stress   │   │
-                    │  │   ☁️ Environmental       │   │
-                    │  │   💧 Contamination       │   │
-                    │  │   🔧 Mechanical          │   │
-                    │  │   ⏱️ Aging               │   │
-                    │  │                          │   │
-                    │  │ • Analysis Details Card  │   │
-                    │  │ • Action Buttons         │   │
-                    │  │   [New Analysis] [Home]  │   │
-                    │  └──────────────────────────┘   │
-                    └─────────────────────────────────┘
+
+#### 2. meals
+```sql
+CREATE TABLE meals (
+  id TEXT PRIMARY KEY,
+  consumedAt INTEGER NOT NULL,
+  foods TEXT NOT NULL,          -- JSON array of FoodItem
+  recoveryScore INTEGER,
+  feedbackMessage TEXT,
+  imagePath TEXT
+);
+```
+
+#### 3. progress_tracking
+```sql
+CREATE TABLE progress_tracking (
+  id TEXT PRIMARY KEY,
+  date INTEGER NOT NULL,
+  nutrient TEXT NOT NULL,
+  score REAL NOT NULL,
+  notes TEXT
+);
+```
+
+#### 4. user_profile
+```sql
+CREATE TABLE user_profile (
+  id TEXT PRIMARY KEY,
+  name TEXT,
+  age INTEGER,
+  gender TEXT,
+  weight REAL,
+  height REAL,
+  bmi REAL,
+  activityLevel TEXT,
+  dietaryPreference TEXT,
+  updatedAt INTEGER
+);
 ```
 
 ---
 
-## 📱 Mobile Application Architecture
+## 🔌 API Integration
 
-### Screen Flow
+### 1. Groq AI API
 
-```
-┌────────────────────┐
-│  Upload Screen     │ ← App Entry Point
-│  (upload_screen.   │
-│   dart)            │
-│                    │
-│  Components:       │
-│  • Camera Button   │
-│  • Gallery Button  │
-│  • Image Preview   │
-│  • Analyze Button  │
-└─────────┬──────────┘
-          │ User clicks "Analyze"
-          ▼
-┌────────────────────┐
-│ Analyzing Screen   │ ← Temporary Loading State
-│ (built-in widget)  │
-│                    │
-│  Components:       │
-│  • Loading Spinner │
-│  • "Analyzing..."  │
-│  • Progress Text   │
-└─────────┬──────────┘
-          │ API Response received
-          ▼
-┌────────────────────┐
-│  Result Screen     │ ← Final Display
-│  (result_screen.   │
-│   dart)            │
-│                    │
-│  Animations:       │
-│  • Fade-in (1s)    │
-│  • Slide-up (1.2s) │
-│  • Scale (1.4s)    │
-│  • Bounce (1.6s)   │
-│                    │
-│  Sections:         │
-│  1. Image Card     │
-│  2. Status Icon    │
-│  3. Title          │
-│  4. Confidence     │
-│  5. Message        │
-│  6. Damage Causes* │
-│  7. Details Card   │
-│  8. Action Buttons │
-│                    │
-│  *Only if damaged  │
-└────────────────────┘
-```
+**Base URL:** `https://api.groq.com/openai/v1/chat/completions`
 
-### Key Components
+**Models Used:**
+- `meta-llama/llama-4-scout-17b-16e-instruct` - Vision analysis
+- `llama-3.3-70b-versatile` - Chatbot & text analysis
+- `llama-3.1-8b-instant` - Fast queries
 
-#### 1. API Service (`lib/services/api_service.dart`)
-```dart
-class ApiService {
-  static const String baseUrl = 'http://192.168.246.206:5000';
-  
-  Future<DetectionResult> detectInsulator(File imageFile) async {
-    // 1. Create multipart request
-    // 2. Attach image file
-    // 3. POST to /api/analyze
-    // 4. Parse JSON response
-    // 5. Return DetectionResult model
-  }
-}
-```
-
-#### 2. Detection Result Model (`lib/models/detection_result.dart`)
-```dart
-class DetectionResult {
-  final bool isHealthy;
-  final double confidence;
-  final String message;
-  
-  // Factory constructor for JSON parsing
-  factory DetectionResult.fromJson(Map<String, dynamic> json)
-}
-```
-
----
-
-## 🖥️ Backend Server Architecture
-
-### API Endpoints
-
-#### 1. **GET /** - Web Interface
-- **Purpose:** Serve HTML web interface for browser-based analysis
-- **Response:** HTML page with upload form
-- **Use Case:** Desktop/laptop users
-
-#### 2. **POST /api/analyze** - Mobile API
-- **Purpose:** Analyze insulator images from mobile app
-- **Request Format:**
-  ```
-  Content-Type: multipart/form-data
-  Body: file=<image_binary>
-  ```
-- **Response Format:**
-  ```json
-  {
-    "success": true,
-    "is_healthy": false,
-    "is_damaged": true,
-    "confidence": 0.87,
-    "status": "Damaged",
-    "message": "Insulator is DAMAGED - AI Powered Analysis",
-    "details": {
-      "clip_healthy": 0.15,
-      "clip_damaged": 0.85,
-      "edge_score": 0.72,
-      "combined_score": 0.79
+**Request Format:**
+```json
+{
+  "model": "llama-3.3-70b-versatile",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a nutrition doctor..."
+    },
+    {
+      "role": "user",
+      "content": "What foods help with iron deficiency?"
     }
-  }
-  ```
-
-### AI Model Pipeline
-
-#### Stage 1: Image Preprocessing
-```python
-def preprocess_image(image_path):
-    # 1. Load image
-    image = Image.open(image_path).convert("RGB")
-    
-    # 2. Resize to 224×224 (CLIP input size)
-    image = image.resize((224, 224))
-    
-    # 3. Enhance contrast and brightness
-    image_cv = np.array(image)
-    image_cv = cv2.convertScaleAbs(image_cv, alpha=1.2, beta=10)
-    
-    return Image.fromarray(image_cv)
-```
-
-#### Stage 2: Edge Density Computation
-```python
-def compute_edge_density(image_path):
-    # 1. Load image as grayscale
-    img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-    
-    # 2. Apply Gaussian blur
-    blurred = cv2.GaussianBlur(img, (5, 5), 0)
-    
-    # 3. Canny edge detection (auto thresholds)
-    edges = cv2.Canny(blurred, threshold1, threshold2)
-    
-    # 4. Calculate edge density ratio
-    edge_density = np.sum(edges > 0) / edges.size
-    
-    return edge_density
-```
-
-#### Stage 3: CLIP Inference
-```python
-def clip_inference(image):
-    # 1. Define text prompts
-    texts = [
-        "a clean, undamaged electrical insulator",
-        "a broken, damaged electrical insulator"
-    ]
-    
-    # 2. Tokenize texts
-    text_inputs = tokenizer(texts, padding=True, return_tensors="pt")
-    
-    # 3. Preprocess image (normalize with ImageNet stats)
-    pixel_values = preprocess_image_clip(image)
-    
-    # 4. Forward pass through CLIP
-    outputs = model(input_ids=text_inputs, pixel_values=pixel_values)
-    
-    # 5. Compute probabilities
-    probs = outputs.logits_per_image.softmax(dim=1)
-    
-    return probs[0]  # [healthy_prob, damaged_prob]
-```
-
-#### Stage 4: Ensemble Decision
-```python
-def make_decision(clip_probs, edge_score):
-    healthy_prob, damaged_prob = clip_probs
-    
-    # Weighted combination
-    combined_score = 0.6 * damaged_prob + 0.4 * edge_score
-    
-    # Threshold-based classification
-    is_damaged = combined_score > 0.5
-    confidence = combined_score if is_damaged else (1 - combined_score)
-    
-    return is_damaged, confidence
-```
-
----
-
-## 🎨 UI/UX Design Features
-
-### Result Screen Enhancements
-
-#### 1. **Typography Hierarchy**
-- App Bar Title: **22px bold** (increased from 17px)
-- Main Title: **32px bold** (increased from 22px)
-- Confidence: **36px bold** (new prominent display)
-- Body Text: **16px medium** (increased from 12.5px)
-- Detail Labels: **15-16px** (increased from 12px)
-
-#### 2. **Animation Timeline**
-```
-0ms    → App opens result screen
-200ms  → Slide animation starts (content slides up)
-400ms  → Scale animation starts (icon grows from 0.3 to 1.0)
-600ms  → Fade animation starts (content fades in)
-800ms  → Bounce animation starts (title bounces)
-1600ms → All animations complete
-```
-
-#### 3. **Damage Causes Section** (Only for Damaged Insulators)
-```
-┌─────────────────────────────────────────────────┐
-│  ⚠️ Possible Damage Causes                      │
-├─────────────────────────────────────────────────┤
-│  ⚡ Electrical Stress (Yellow accent)           │
-│     High voltage surges, lightning strikes...   │
-│                                                 │
-│  ☁️ Environmental Factors (Blue accent)         │
-│     Prolonged exposure to rain, UV radiation... │
-│                                                 │
-│  💧 Contamination (Purple accent)               │
-│     Accumulation of dust, salt deposits...      │
-│                                                 │
-│  🔧 Mechanical Damage (Orange accent)           │
-│     Physical impacts, vibrations from wind...   │
-│                                                 │
-│  ⏱️ Material Aging (Gray accent)                │
-│     Natural degradation over time, thermal...   │
-└─────────────────────────────────────────────────┘
-```
-
-#### 4. **Color Scheme**
-- **Healthy Status:**
-  - Primary: `#10B981` (Green)
-  - Background Gradient: `#D1FAE5` → `#A7F3D0` (Light green)
-  
-- **Damaged Status:**
-  - Primary: `#EF4444` (Red)
-  - Background Gradient: `#FEE2E2` → `#FECACA` (Light red)
-
----
-
-## 📊 Technical Specifications
-
-### Mobile App
-| Component | Technology | Version |
-|-----------|------------|---------|
-| Framework | Flutter | Latest stable |
-| Language | Dart | 2.19+ |
-| State Management | StatefulWidget | Built-in |
-| HTTP Client | http package | ^1.1.0 |
-| Image Picker | image_picker | ^1.0.4 |
-| Permissions | permission_handler | ^11.0.1 |
-
-### Backend Server
-| Component | Technology | Version |
-|-----------|------------|---------|
-| Framework | Flask | 2.2.5 |
-| AI Model | CLIP (ViT-B/32) | openai/clip-vit-base-patch32 |
-| Deep Learning | PyTorch | 2.8.0 |
-| Transformers | Hugging Face | 4.57.0 |
-| Computer Vision | OpenCV | 4.8.1 |
-| Image Processing | Pillow | 10.1.0 |
-| Numerical Computing | NumPy | 1.24.4 |
-| ML Toolkit | scikit-learn | 1.2.2 |
-
-### System Requirements
-| Requirement | Specification |
-|-------------|---------------|
-| Python | 3.9+ |
-| RAM | 4GB minimum (8GB recommended) |
-| Storage | 2GB for model cache |
-| Network | WiFi/LAN connectivity |
-| Mobile OS | Android 6.0+ |
-
----
-
-## 🚀 Deployment & Setup
-
-### Quick Start Guide
-
-#### 1. **Backend Setup (One-Click)**
-```batch
-# Simply double-click this file:
-start_server.bat
-
-# What it does automatically:
-# ✓ Checks Python installation
-# ✓ Upgrades pip
-# ✓ Installs all requirements
-# ✓ Creates necessary directories
-# ✓ Downloads CLIP model (first run)
-# ✓ Runs calibration
-# ✓ Starts Flask server on port 5000
-```
-
-#### 2. **Find Your Server IP**
-```batch
-# The start_server.bat displays:
-Server will be available at:
-  - Local:   http://127.0.0.1:5000
-  - Network: http://192.168.246.206:5000
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-            Use this IP in mobile app
-```
-
-#### 3. **Mobile App Configuration**
-```dart
-// lib/services/api_service.dart
-class ApiService {
-  // Update this with YOUR server IP from step 2:
-  static const String baseUrl = 'http://192.168.246.206:5000';
-  //                                   ^^^^^^^^^^^^^^^^
-  //                                   YOUR_PC_IP_HERE
+  ],
+  "temperature": 0.7,
+  "max_tokens": 1000
 }
 ```
 
-#### 4. **Build & Install Mobile App**
+**Vision Request:**
+```json
+{
+  "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "Analyze this food image..."
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "data:image/jpeg;base64,..."
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+### 2. Google Gemini API
+
+**Model:** `gemini-2.0-flash-exp`
+
+**Usage:** Alternative chatbot provider with vision capabilities
+
+### 3. HuggingFace API
+
+**Model:** `google/mobilenet_v2_1.0_224`
+
+**Endpoint:** `https://api-inference.huggingface.co/models/google/mobilenet_v2_1.0_224`
+
+**Usage:** Image classification for symptom detection
+
+### 4. Open Food Facts API
+
+**Base URL:** `https://world.openfoodfacts.org/api/v0/product/{barcode}.json`
+
+**Usage:** Barcode scanning for packaged food nutritional info
+
+---
+
+## 📦 Installation Guide
+
+### Prerequisites
+
+- Flutter SDK 3.9.2 or higher
+- Dart SDK 3.0+
+- Android Studio / VS Code
+- Android SDK (for Android builds)
+- Xcode (for iOS builds - macOS only)
+
+### Step 1: Clone Repository
+
 ```bash
-# Connect Android device via USB
-# Enable USB debugging on phone
-
-# Build APK
-flutter build apk --release
-
-# Install on device
-flutter install -d <DEVICE_ID>
-
-# Or just run:
-flutter run
+git clone https://github.com/yourusername/nutrition-deficiency-detector.git
+cd nutrition-deficiency-detector
 ```
 
----
+### Step 2: Install Dependencies
 
-## 📈 Performance Metrics
-
-### Model Accuracy
-- **CLIP Confidence:** 85-95% (typical range)
-- **Edge Detection:** Supplementary validation
-- **Ensemble Method:** Improved robustness vs single-model
-- **Calibration:** Adaptive thresholds based on healthy/damaged samples
-
-### Response Times
-| Operation | Duration |
-|-----------|----------|
-| Image Upload | 0.5-2s (network dependent) |
-| CLIP Inference | 1-3s (CPU) / 0.2-0.5s (GPU) |
-| Edge Processing | 0.1-0.3s |
-| Total Analysis | 2-5s (typical) |
-| First Run | +10-30s (model download) |
-
-### Resource Usage
-| Resource | Usage |
-|----------|-------|
-| Model Size | ~600MB (CLIP ViT-B/32) |
-| Peak RAM | 2-4GB (during inference) |
-| APK Size | ~42MB (release build) |
-| Network | ~1-5MB per analysis (image size dependent) |
-
----
-
-## 🔒 Security & Privacy
-
-### Data Handling
-- ✅ Images stored temporarily in `uploads/` folder
-- ✅ No persistent storage of user data
-- ✅ No external API calls (model runs locally)
-- ✅ Network traffic: local LAN only (configurable)
-
-### Recommended Practices
-1. Use **private WiFi networks** for mobile-server communication
-2. Configure **firewall rules** to restrict port 5000 access
-3. Consider **HTTPS/TLS** for production deployments
-4. Implement **authentication** for multi-user scenarios
-5. Regularly **clean uploads/** directory
-
----
-
-## 🛠️ Troubleshooting Guide
-
-### Common Issues & Solutions
-
-#### 1. **"Connection refused" on Mobile**
-- ✅ Check server is running (`start_server.bat`)
-- ✅ Verify PC and phone on same WiFi network
-- ✅ Update `baseUrl` in `api_service.dart` with correct IP
-- ✅ Disable Windows Firewall or allow port 5000
-
-#### 2. **"500 Internal Server Error"**
-- ✅ Check Flask terminal for Python traceback
-- ✅ Verify all requirements installed correctly
-- ✅ Ensure NumPy version compatibility (1.24.4)
-- ✅ Re-run `start_server.bat` to reinstall packages
-
-#### 3. **"Analysis takes too long"**
-- ✅ First run downloads model (~600MB) - wait 5-10 min
-- ✅ Subsequent runs should be 2-5 seconds
-- ✅ Check CPU usage (high = model loading)
-- ✅ Consider using GPU-enabled PyTorch for faster inference
-
-#### 4. **"Numpy.dtype size changed" Error**
-- ✅ Fixed in latest `requirements.txt` (NumPy pinned to 1.24.4)
-- ✅ Run: `pip uninstall numpy scikit-learn -y`
-- ✅ Then: `pip install -r requirements.txt`
-
----
-
-## 📚 File Structure
-
-```
-insulator/
-├── android/                     # Android build configuration
-├── ios/                         # iOS build configuration (unused)
-├── lib/                         # Flutter source code
-│   ├── main.dart               # App entry point
-│   ├── models/
-│   │   └── detection_result.dart   # Data model for API response
-│   ├── screens/
-│   │   ├── upload_screen.dart      # Image upload/capture screen
-│   │   └── result_screen.dart      # Analysis result display (enhanced UI)
-│   ├── services/
-│   │   └── api_service.dart        # HTTP client for Flask API
-│   └── widgets/                    # Reusable UI components
-├── uploads/                     # Temporary image storage (server)
-├── model_cache/                 # Downloaded CLIP model cache
-├── healthy/                     # Sample healthy insulator images (calibration)
-├── damaged/                     # Sample damaged insulator images (calibration)
-├── static/                      # Web UI assets (CSS)
-├── templates/                   # Flask HTML templates
-│   └── index.html              # Web upload interface
-├── app.py                       # Flask server main file
-├── requirements.txt             # Python dependencies
-├── start_server.bat             # One-click server launcher (Windows)
-├── pubspec.yaml                 # Flutter dependencies
-└── PROJECT_DOCUMENTATION.md     # This file
+```bash
+flutter pub get
 ```
 
+### Step 3: Configure API Keys
+
+Create `lib/config/api_keys.dart`:
+
+```dart
+class ApiKeys {
+  static const groqApiKey = 'your_groq_api_key_here';
+  static const geminiApiKey = 'your_gemini_api_key_here';
+  static const huggingFaceToken = 'your_huggingface_token_here';
+}
+```
+
+### Step 4: Run the App
+
+**Android:**
+```bash
+flutter run -d android
+```
+
+**iOS:**
+```bash
+flutter run -d ios
+```
+
+**Web:**
+```bash
+flutter run -d chrome
+```
+
+**Windows:**
+```bash
+flutter run -d windows
+```
+
+### Step 5: Build Release APK
+
+```bash
+flutter build apk --release --split-per-abi
+```
+
+Output: `build/app/outputs/flutter-apk/`
+
 ---
 
-## 🎓 Educational Value
+## 📱 Usage Guide
 
-### Learning Outcomes
-This project demonstrates:
-1. **Mobile-Server Architecture** - Building client-server applications
-2. **REST API Design** - Creating JSON APIs for mobile apps
-3. **Computer Vision** - Image preprocessing and analysis
-4. **Deep Learning** - Using pre-trained models (CLIP)
-5. **Ensemble Methods** - Combining multiple signals for robust decisions
-6. **UI/UX Design** - Creating professional mobile interfaces
-7. **Network Programming** - HTTP communication and error handling
-8. **Cross-Platform Development** - Flutter for Android/iOS
+### 1. First Time Setup
 
-### Potential Extensions
-- 📸 Add insulator localization (object detection)
-- 📊 Historical analysis tracking and trends
-- 🗂️ Database integration for record keeping
-- 🔐 User authentication and multi-user support
-- 🌐 Cloud deployment (AWS/GCP/Azure)
-- 📱 iOS version development
-- 🤖 Model fine-tuning on custom dataset
-- 📈 Severity grading (mild/moderate/severe damage)
+1. Open the app
+2. On landing page, tap **"Get Started"**
+3. Complete user profile (name, age, weight, height)
+4. Grant camera and microphone permissions
+5. Optionally enable location services
+
+### 2. Visual Deficiency Check
+
+1. Tap **"Analyze Health"** on home screen
+2. Upload 4 images:
+   - Tongue (close-up, well-lit)
+   - Lips (front view)
+   - Nails (clean, natural lighting)
+   - Eyes (open, looking at camera)
+3. Tap **"Analyze Images"**
+4. View detected deficiencies with confidence scores
+5. Read explanations and food recommendations
+
+### 3. AR Food Scanning
+
+1. Tap **"AR Food Analyzer"**
+2. Point camera at meal
+3. Choose mode:
+   - **Capture**: Tap camera button to analyze
+   - **Live**: Toggle for continuous scanning
+4. View AR overlays with nutrition info
+5. Check meal score and health advice
+
+### 4. Voice Meal Logging
+
+1. Tap **"Voice Meal Logger"**
+2. Tap microphone button
+3. Speak your meal: "I ate chicken curry with rice"
+4. AI identifies foods and calculates nutrition
+5. Review and save to meal history
+
+### 5. Track Progress
+
+1. Go to **"Progress Dashboard"**
+2. View charts showing deficiency improvements
+3. See weekly/monthly trends
+4. Check meal recovery scores
+
+### 6. Chat with AI Doctor
+
+1. Open **"AI Chatbot"**
+2. Ask nutrition questions
+3. Get personalized advice based on your deficiencies
+4. Request recipes, meal plans, or health tips
+
+### 7. Generate Reports
+
+1. Navigate to **"Health Report"**
+2. Tap **"Generate PDF Report"**
+3. Review summary, charts, and meal history
+4. Share with doctor or save to device
 
 ---
 
-## 👥 Project Credits
+## 🎨 Screenshots
 
-**Development:** AI-Powered Insulator Detection System  
-**Version:** 2.0 (Enhanced UI + Damage Causes Analysis)  
-**Technology Stack:**
-- Frontend: Flutter (Dart)
-- Backend: Flask (Python)
-- AI Model: OpenAI CLIP (Hugging Face Transformers)
-- Computer Vision: OpenCV
-- Deep Learning: PyTorch
+*(Screenshots would be added here)*
+
+### Landing Page
+- Beautiful gradient background
+- Feature highlights
+- Get Started button
+
+### Deficiency Detection
+- Image upload interface
+- Analysis progress
+- Results with severity indicators
+
+### AR Food Analyzer
+- Real-time camera view
+- Floating nutrition labels
+- Health score display
+
+### Progress Dashboard
+- Interactive line charts
+- Bar graphs for nutrients
+- Historical comparisons
+
+### AI Chatbot
+- Chat interface
+- Bubble messages
+- Quick suggestions
 
 ---
 
-## 📄 License & Usage
+## 🔒 Privacy & Security
 
-This project is intended for **educational and research purposes**. For production deployment in critical infrastructure (power grid inspection), please ensure:
-- Validation against ground truth data
-- Safety protocols and human oversight
-- Compliance with relevant industry standards
-- Professional liability insurance
+- **Local Data Storage**: All health data stored locally on device using SQLite
+- **No Cloud Sync**: Data never leaves your device unless you explicitly export
+- **API Security**: API keys encrypted in production builds
+- **Permission Management**: Granular control over camera, mic, location access
+- **Data Export**: Users can export/delete their data anytime
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these guidelines:
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Groq AI** for fast and accurate AI models
+- **Google Gemini** for conversational AI
+- **HuggingFace** for vision models
+- **Open Food Facts** for product database
+- **Flutter Team** for the amazing framework
+- Medical advisors for nutritional guidance
 
 ---
 
 ## 📞 Support
 
-For issues, questions, or contributions:
-1. Check the **Troubleshooting Guide** section above
-2. Review Flask server logs in the terminal
-3. Use `flutter doctor` to verify mobile setup
-4. Consult official documentation:
-   - Flutter: https://flutter.dev/docs
-   - Flask: https://flask.palletsprojects.com/
-   - CLIP: https://huggingface.co/openai/clip-vit-base-patch32
+For issues, questions, or suggestions:
+
+- 📧 Email: support@nutritionapp.com
+- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/nutrition-deficiency-detector/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/nutrition-deficiency-detector/discussions)
 
 ---
 
-## 🔄 Version History
+## 🗺️ Roadmap
 
-### Version 2.0 (Current)
-- ✨ Enhanced UI with bigger text and modern design
-- 📋 Added comprehensive damage causes section
-- 🎬 Smooth staggered animations (fade, slide, scale, bounce)
-- 📊 Prominent confidence display with gradient badge
-- 🎨 Color-coded damage cause cards with icons
-- 🔧 Fixed JSON API endpoint (/api/analyze)
-- 📱 One-click server launcher (start_server.bat)
-- 📝 Complete project documentation
+### Version 2.0 (Planned)
+- [ ] Multi-language support (Hindi, Tamil, Telugu, etc.)
+- [ ] Apple Watch integration
+- [ ] Meal planning with grocery lists
+- [ ] Social features (share recipes, challenges)
+- [ ] Integration with fitness trackers
+- [ ] Prescription supplement tracking
+- [ ] Doctor consultation booking
+- [ ] Insurance claim integration
 
-### Version 1.0
-- ✅ Basic mobile app with upload and result screens
-- 🤖 CLIP-based insulator classification
-- 🌐 Flask backend with web interface
-- 📡 REST API for mobile communication
-- 🔍 Edge density analysis
-- ⚡ Ensemble decision making
-
----
-
-## 🎯 Visual Flow Diagrams
-
-### 1. USER JOURNEY FLOW
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         USER INTERACTION FLOW                        │
-└─────────────────────────────────────────────────────────────────────┘
-
-    📱 USER                         🖥️ MOBILE APP                   ☁️ SERVER
-      │                                  │                              │
-      │  1. Open App                     │                              │
-      ├─────────────────────────────────>│                              │
-      │                                  │                              │
-      │  2. Tap "Camera" or "Gallery"    │                              │
-      ├─────────────────────────────────>│                              │
-      │                                  │                              │
-      │  3. Capture/Select Image         │                              │
-      ├─────────────────────────────────>│                              │
-      │                                  │                              │
-      │                                  │ Display Image Preview        │
-      │                                  │                              │
-      │  4. Tap "Analyze Condition"      │                              │
-      ├─────────────────────────────────>│                              │
-      │                                  │                              │
-      │                                  │ Show "Analyzing..." screen   │
-      │                                  │                              │
-      │                                  │  5. POST /api/analyze        │
-      │                                  ├─────────────────────────────>│
-      │                                  │      (Send image file)       │
-      │                                  │                              │
-      │                                  │                              │  Process:
-      │                                  │                              │  • Resize
-      │                                  │                              │  • CLIP
-      │                                  │                              │  • Edges
-      │                                  │                              │  • Decision
-      │                                  │                              │
-      │                                  │  6. JSON Response            │
-      │                                  │<─────────────────────────────┤
-      │                                  │  {is_healthy, confidence...} │
-      │                                  │                              │
-      │                                  │ Parse & Navigate to Result   │
-      │                                  │                              │
-      │  7. View Result Screen           │                              │
-      │<─────────────────────────────────┤                              │
-      │     • Status (✓/⚠)               │                              │
-      │     • Confidence %               │                              │
-      │     • Damage Causes (if damaged) │                              │
-      │                                  │                              │
-      │  8. Tap "New Analysis" or "Home" │                              │
-      ├─────────────────────────────────>│                              │
-      │                                  │                              │
-      │  Return to Upload Screen         │                              │
-      │<─────────────────────────────────┤                              │
-      │                                  │                              │
-```
+### Version 3.0 (Future)
+- [ ] Blood test result integration
+- [ ] Wearable device sync
+- [ ] Family health tracking
+- [ ] Telemedicine integration
+- [ ] AI-powered recipe generator
+- [ ] Augmented reality meal planning
+- [ ] Genetic nutrition recommendations
 
 ---
 
-### 2. DATA FLOW DIAGRAM
+<div align="center">
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                    ANALYSIS PIPELINE DATA FLOW                       │
-└─────────────────────────────────────────────────────────────────────┘
+**Made with ❤️ and Flutter**
 
-INPUT IMAGE (JPEG/PNG)
-    │
-    ├──────────────────────────┬──────────────────────────┐
-    │                          │                          │
-    ▼                          ▼                          ▼
-┌─────────┐             ┌─────────┐              ┌─────────┐
-│ UPLOAD  │             │  SAVE   │              │ VALIDATE│
-│ TO      │────────────>│ TO      │─────────────>│ FILE    │
-│ SERVER  │  multipart  │ uploads/│  secure name │ EXISTS  │
-└─────────┘             └─────────┘              └────┬────┘
-                                                      │
-                                                      ▼
-                                              ┌───────────────┐
-                                              │ LOAD & RESIZE │
-                                              │ PIL: 224×224  │
-                                              │ RGB mode      │
-                                              └───────┬───────┘
-                                                      │
-                            ┌─────────────────────────┴─────────────────────────┐
-                            │                                                   │
-                            ▼                                                   ▼
-                  ┌──────────────────┐                              ┌──────────────────┐
-                  │ ENHANCE IMAGE    │                              │ EDGE DETECTION   │
-                  │ • Contrast×1.2   │                              │ • Gaussian blur  │
-                  │ • Brightness+10  │                              │ • Canny edges    │
-                  │ • OpenCV process │                              │ • Count pixels   │
-                  └────────┬─────────┘                              └────────┬─────────┘
-                           │                                                 │
-                           ▼                                                 │
-                  ┌──────────────────┐                                      │
-                  │ CLIP INFERENCE   │                                      │
-                  │ 1. Normalize     │                                      │
-                  │    (ImageNet)    │                                      │
-                  │ 2. Vision encode │                                      │
-                  │    (ViT-B/32)    │                                      │
-                  │ 3. Text encode   │                                      │
-                  │    (2 prompts)   │                                      │
-                  │ 4. Similarity    │                                      │
-                  │ 5. Softmax probs │                                      │
-                  └────────┬─────────┘                                      │
-                           │                                                 │
-                           │ [healthy: 0.15]                                 │
-                           │ [damaged: 0.85]                                 │
-                           │                                                 │
-                           └──────────────────┬──────────────────────────────┘
-                                              │                  [edge_score: 0.72]
-                                              ▼
-                                    ┌─────────────────┐
-                                    │ ENSEMBLE FUSION │
-                                    │                 │
-                                    │ combined_score= │
-                                    │  60%×damaged_p  │
-                                    │  +40%×edge_s    │
-                                    │                 │
-                                    │ = 0.85×0.6 +    │
-                                    │   0.72×0.4      │
-                                    │ = 0.798         │
-                                    └────────┬────────┘
-                                             │
-                                             ▼
-                                    ┌─────────────────┐
-                                    │ CLASSIFICATION  │
-                                    │                 │
-                                    │ IF score > 0.5: │
-                                    │   → DAMAGED     │
-                                    │ ELSE:           │
-                                    │   → HEALTHY     │
-                                    └────────┬────────┘
-                                             │
-                                             ▼
-                                    ┌─────────────────┐
-                                    │ BUILD RESPONSE  │
-                                    │                 │
-                                    │ {               │
-                                    │   success: T,   │
-                                    │   is_damaged:T, │
-                                    │   confidence:   │
-                                    │     0.798,      │
-                                    │   message: "...",│
-                                    │   details: {...}│
-                                    │ }               │
-                                    └────────┬────────┘
-                                             │
-                                             ▼
-                                    ┌─────────────────┐
-                                    │ RETURN JSON     │
-                                    │ HTTP 200 OK     │
-                                    └─────────────────┘
-```
+⭐ Star this repo if you find it useful!
 
----
-
-### 3. COMPONENT INTERACTION DIAGRAM
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│              SYSTEM COMPONENTS & INTERACTIONS                        │
-└─────────────────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────────────────┐
-│                         MOBILE APP LAYER                             │
-├─────────────────────────────────────────────────────────────────────┤
-│  ┌────────────┐   ┌────────────┐   ┌────────────┐                  │
-│  │  Upload    │──>│ Analyzing  │──>│  Result    │                  │
-│  │  Screen    │   │  Screen    │   │  Screen    │                  │
-│  └─────┬──────┘   └────────────┘   └──────▲─────┘                  │
-│        │                                    │                        │
-│        │ uses                               │ displays               │
-│        ▼                                    │                        │
-│  ┌────────────────────────────────────┐    │                        │
-│  │       ApiService                   │    │                        │
-│  │  • baseUrl configuration           │────┘                        │
-│  │  • detectInsulator(file)           │                             │
-│  │  • HTTP POST multipart             │                             │
-│  │  • JSON parsing                    │                             │
-│  └───────────────┬────────────────────┘                             │
-│                  │                                                   │
-│                  │ uses                                              │
-│                  ▼                                                   │
-│  ┌────────────────────────────────────┐                             │
-│  │    DetectionResult Model           │                             │
-│  │  • isHealthy: bool                 │                             │
-│  │  • confidence: double              │                             │
-│  │  • message: String                 │                             │
-│  │  • fromJson() factory              │                             │
-│  └────────────────────────────────────┘                             │
-└─────────────────────────────────────────────────────────────────────┘
-                           │ HTTP POST
-                           │ /api/analyze
-                           ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                        NETWORK LAYER                                 │
-├─────────────────────────────────────────────────────────────────────┤
-│  Protocol: HTTP                                                      │
-│  Format: multipart/form-data (request) / JSON (response)            │
-│  Port: 5000                                                          │
-│  Network: WiFi/LAN                                                   │
-└─────────────────────────────────────────────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                      FLASK SERVER LAYER                              │
-├─────────────────────────────────────────────────────────────────────┤
-│  ┌────────────────────────────────────────────────────────────┐    │
-│  │  Flask App (app.py)                                        │    │
-│  │  ┌──────────────┐  ┌──────────────┐  ┌─────────────────┐  │    │
-│  │  │ Route: /     │  │ Route:       │  │ uploads/        │  │    │
-│  │  │ (Web UI)     │  │ /api/analyze │  │ (static files)  │  │    │
-│  │  └──────────────┘  └──────┬───────┘  └─────────────────┘  │    │
-│  └──────────────────────────┬┼────────────────────────────────┘    │
-│                             ││                                      │
-│                             ││ calls                                │
-│                             │└─────────────────────┐                │
-│                             ▼                      ▼                │
-│  ┌──────────────────────────────┐   ┌────────────────────────────┐ │
-│  │  Image Processing Module     │   │  AI Inference Module       │ │
-│  │  • load_image()              │   │  • CLIP model              │ │
-│  │  • resize_image()            │   │  • Tokenizer               │ │
-│  │  • enhance_contrast()        │   │  • vision_encoder()        │ │
-│  │  • compute_edge_density()    │   │  • text_encoder()          │ │
-│  │  • Canny edge detection      │   │  • similarity_computation()│ │
-│  └──────────────┬───────────────┘   └────────────┬───────────────┘ │
-│                 │                                 │                 │
-│                 └────────────┬────────────────────┘                 │
-│                              ▼                                      │
-│  ┌──────────────────────────────────────────────────────────────┐  │
-│  │  Decision Engine                                             │  │
-│  │  • Weighted ensemble (60% CLIP + 40% Edge)                   │  │
-│  │  • Threshold classification (> 0.5 = damaged)                │  │
-│  │  • Confidence calculation                                    │  │
-│  │  • JSON response builder                                     │  │
-│  └──────────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-### 4. STATE TRANSITION DIAGRAM (Mobile App)
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                   MOBILE APP STATE MACHINE                           │
-└─────────────────────────────────────────────────────────────────────┘
-
-                        ┌──────────────┐
-                        │   APP START  │
-                        │  (main.dart) │
-                        └──────┬───────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-              ┌────►│   IDLE / UPLOAD     │◄────┐
-              │     │   • Camera button   │     │
-              │     │   • Gallery button  │     │
-              │     │   • No image loaded │     │
-              │     └──────────┬──────────┘     │
-              │                │                │
-              │     User selects image          │
-              │                │                │
-              │                ▼                │
-              │     ┌─────────────────────┐    │
-              │     │  IMAGE SELECTED     │    │
-              │     │  • Show preview     │    │
-              │     │  • Enable "Analyze" │    │
-              │     └──────────┬──────────┘    │
-              │                │                │
-              │     User clicks "Analyze"       │
-              │                │                │
-              │                ▼                │
-              │     ┌─────────────────────┐    │
-              │     │    ANALYZING        │    │
-              │     │  • Loading spinner  │    │
-              │     │  • API call in      │    │
-              │     │    progress         │    │
-              │     └──┬────────────────┬─┘    │
-              │        │                │      │
-              │   API Success      API Error   │
-              │        │                │      │
-              │        ▼                ▼      │
-              │  ┌──────────┐    ┌──────────┐ │
-              │  │ RESULT   │    │  ERROR   │ │
-              │  │ DISPLAY  │    │ DIALOG   │ │
-              │  │ • Status │    │ • Retry  │ │
-              │  │ • Causes │    │ • Cancel │ │
-              │  │ • Details│    └────┬─────┘ │
-              │  └────┬─────┘         │       │
-              │       │               │       │
-              │  User clicks     User dismisses
-              │  "New Analysis"  or retries    │
-              │  or "Home"            │        │
-              │       │               │        │
-              └───────┴───────────────┘        │
-                                               │
-                      User force quits app     │
-                                │              │
-                                ▼              │
-                         ┌──────────┐          │
-                         │ APP EXIT │          │
-                         └──────────┘          │
-                                               │
-                  User restarts app            │
-                                │              │
-                                └──────────────┘
-```
-
----
-
-### 5. ERROR HANDLING FLOW
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                      ERROR HANDLING DIAGRAM                          │
-└─────────────────────────────────────────────────────────────────────┘
-
-           ┌─────────────────────────────┐
-           │  User Initiates Analysis    │
-           └─────────────┬───────────────┘
-                         │
-                         ▼
-           ┌─────────────────────────────┐
-           │  Validate Image File        │
-           └─────────────┬───────────────┘
-                         │
-            ┌────────────┴────────────┐
-            │                         │
-         Valid                    Invalid
-            │                         │
-            ▼                         ▼
-   ┌─────────────────┐      ┌─────────────────┐
-   │ Send API Request│      │ Show Error:     │
-   └────────┬────────┘      │ "No image       │
-            │               │  selected"      │
-            ▼               └─────────────────┘
-   ┌─────────────────┐
-   │ Network Layer   │
-   └────────┬────────┘
-            │
-     ┌──────┴──────┐
-     │             │
-Connection     Connection
- Success        Failed
-     │             │
-     ▼             ▼
-┌─────────┐  ┌──────────────────┐
-│ Server  │  │ Show Error:      │
-│ Process │  │ "Cannot connect  │
-└────┬────┘  │  to server"      │
-     │       │ • Check WiFi     │
-     │       │ • Verify IP      │
-     │       └──────────────────┘
-     │
-  ┌──┴──┐
-  │     │
-200 OK  4xx/5xx
-  │     │
-  ▼     ▼
-┌────┐ ┌──────────────────┐
-│JSON│ │ Show Error:      │
-│Parse│ │ "Server error"   │
-└─┬──┘ │ Status code: XXX │
-  │    └──────────────────┘
-  │
-┌─┴─┐
-│   │
-Valid Invalid
-JSON  JSON
-│     │
-▼     ▼
-┌───┐ ┌──────────────────┐
-│Show│ │ Show Error:      │
-│Result│ │ "Invalid response"│
-└───┘ └──────────────────┘
-```
-
----
-
-### 6. DEPLOYMENT FLOW
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                     DEPLOYMENT WORKFLOW                              │
-└─────────────────────────────────────────────────────────────────────┘
-
-BACKEND DEPLOYMENT
-══════════════════
-1. Setup Python Environment
-   │
-   ├─► Install Python 3.9+
-   ├─► Double-click start_server.bat
-   │   └─► Auto-installs requirements
-   │   └─► Downloads CLIP model
-   │   └─► Runs calibration
-   │   └─► Starts Flask on port 5000
-   │
-2. Get Server IP
-   │
-   └─► Note IP from terminal output
-       Example: http://192.168.246.206:5000
-
-MOBILE DEPLOYMENT
-═════════════════
-1. Configure API Endpoint
-   │
-   ├─► Edit lib/services/api_service.dart
-   └─► Update baseUrl with server IP
-
-2. Connect Android Device
-   │
-   ├─► Enable USB debugging
-   ├─► Connect via USB
-   └─► Verify: flutter devices
-
-3. Build & Install
-   │
-   ├─► Option A (Debug):
-   │   └─► flutter run
-   │
-   └─► Option B (Release):
-       ├─► flutter build apk --release
-       └─► flutter install -d <DEVICE_ID>
-
-NETWORK CONFIGURATION
-═══════════════════
-1. Ensure Same Network
-   │
-   ├─► Connect PC to WiFi
-   ├─► Connect Phone to same WiFi
-   └─► Verify: ping from phone to PC IP
-
-2. Firewall Rules (if needed)
-   │
-   ├─► Windows: Allow port 5000
-   └─► Router: No additional config needed (LAN)
-
-TESTING
-═══════
-1. Start Backend
-   │
-   └─► Double-click start_server.bat
-
-2. Launch Mobile App
-   │
-   └─► Tap app icon on phone
-
-3. Test Analysis
-   │
-   ├─► Capture/Upload image
-   ├─► Tap "Analyze Condition"
-   └─► Verify result displays correctly
-```
-
----
-
-### 7. DECISION TREE (Classification Logic)
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                  CLASSIFICATION DECISION TREE                        │
-└─────────────────────────────────────────────────────────────────────┘
-
-                        INPUT IMAGE
-                             │
-                             ▼
-                ┌────────────────────────┐
-                │  Extract Features      │
-                │  • CLIP embeddings     │
-                │  • Edge density        │
-                └────────────┬───────────┘
-                             │
-                ┌────────────┴────────────┐
-                │                         │
-                ▼                         ▼
-      ┌──────────────────┐      ┌──────────────────┐
-      │ CLIP Analysis    │      │ Edge Analysis    │
-      │                  │      │                  │
-      │ Healthy: 0.15    │      │ Normalized:      │
-      │ Damaged: 0.85    │      │ 0.72             │
-      └────────┬─────────┘      └────────┬─────────┘
-               │                         │
-               └────────────┬────────────┘
-                            │
-                            ▼
-                 ┌────────────────────┐
-                 │ Weighted Ensemble  │
-                 │                    │
-                 │ Score = 0.6×0.85   │
-                 │       + 0.4×0.72   │
-                 │     = 0.798        │
-                 └──────────┬─────────┘
-                            │
-                            ▼
-                    Is Score > 0.5?
-                            │
-                ┌───────────┴───────────┐
-                │                       │
-              YES                      NO
-                │                       │
-                ▼                       ▼
-        ┌──────────────┐        ┌──────────────┐
-        │   DAMAGED    │        │   HEALTHY    │
-        │              │        │              │
-        │ Confidence:  │        │ Confidence:  │
-        │   79.8%      │        │   1 - score  │
-        │              │        │              │
-        │ Show Causes: │        │ Show Status: │
-        │ • Electrical │        │ • Operational│
-        │ • Weather    │        │ • No action  │
-        │ • Contaminate│        │              │
-        │ • Mechanical │        │              │
-        │ • Aging      │        │              │
-        └──────────────┘        └──────────────┘
-```
-
----
-
-*Last Updated: November 26, 2025*
-
+</div>
