@@ -931,25 +931,44 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Medical advisors for nutritional guidance
 
 ---
----
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
+<!-- Animated Gradient Divider -->
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=90&section=header"/>
+
+<!-- Animated Typing Title -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=24&pause=1000&color=00E676&center=true&vCenter=true&width=800&lines=Designed+%26+Developed+by+Dharun2712;GitHub+ID%3A+Dharun2712;AI-powered+Healthcare+Innovation;Flutter+%7C+AI+%7C+AR+%7C+Vision" />
 
 <br/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&pause=1200&color=2ECC71&center=true&vCenter=true&width=700&lines=Designed+%26+Developed+by+Dharun2712;AI-powered+Healthcare+Innovation;Made+with+❤️+using+Flutter+%26+Groq+AI" />
+<!-- Profile Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub-Dharun2712-black?style=for-the-badge&logo=github"/>
+  <img src="https://img.shields.io/badge/Flutter-Developer-02569B?style=for-the-badge&logo=flutter"/>
+  <img src="https://img.shields.io/badge/AI-Healthcare-2ECC71?style=for-the-badge"/>
+</p>
 
-<br/>
+<!-- Animated Contact -->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&size=18&pause=1500&color=36BCF7&center=true&vCenter=true&width=600&lines=Contact+the+Developer;Open+to+Hackathons+%26+Collaborations" />
+</p>
 
-📧 <a href="mailto:dharunkumarm2005@gmail.com">dharunkumarm2005@gmail.com</a>
+📧 <a href="mailto:dharunkumarm2005@gmail.com"><b>dharunkumarm2005@gmail.com</b></a>  
+🔗 <a href="https://github.com/Dharun2712"><b>github.com/Dharun2712</b></a>
 
 <br/><br/>
 
-⭐ **Star this repository if you find it useful!**
+<!-- Star Animation -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=18&pause=1200&color=FBC02D&center=true&vCenter=true&width=600&lines=⭐+Star+this+repository+to+support+the+project!;Your+support+motivates+innovation+🚀" />
+
+<br/>
+
+<!-- Bottom Animated Divider -->
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=90&section=footer"/>
 
 </div>
+
 
 
 ---
