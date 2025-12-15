@@ -1,21 +1,26 @@
 # 🥗 Nutrition Deficiency Detector - Comprehensive Documentation
+---
+
+## 👤 Project Author
+
 <div align="center">
 
-<h1>🥗 Nutrition Deficiency Detector</h1>
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&duration=3500&pause=1000&color=2ECC71&center=true&vCenter=true&width=800&lines=AI-powered+Nutrition+%26+Health+Tracking+App;Non-Invasive+Deficiency+Detection;AR+Food+Analysis+%7C+Voice+Logging+%7C+AI+Doctor;Built+with+Flutter+%26+Groq+AI" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Montserrat&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Dharun2712;AI+%7C+Flutter+Developer;Healthcare+Innovation+Enthusiast" />
 
 <br/>
 
-<p align="center">
-  <b>Designed & Developed by</b><br/>
-  <b style="font-size:20px;">Dharun2712</b><br/>
-  📧 <a href="mailto:dharunkumarm2005@gmail.com">dharunkumarm2005@gmail.com</a>
-</p>
+🎓 **Computer Science Student**  
+🤖 AI • 🥗 Digital Health • 📱 Flutter • 🧠 AR  
 
-<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=120&section=footer"/>
+📧 **Email:**  
+👉 <a href="mailto:dharunkumarm2005@gmail.com">dharunkumarm2005@gmail.com</a>
+
+💡 *Focused on non-invasive health diagnostics using AI, computer vision, and augmented reality.*
 
 </div>
+
+---
+
 
 <div align="center">
 
