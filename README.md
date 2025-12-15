@@ -1,4 +1,21 @@
 # 🥗 Nutrition Deficiency Detector - Comprehensive Documentation
+<div align="center">
+
+<h1>🥗 Nutrition Deficiency Detector</h1>
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&duration=3500&pause=1000&color=2ECC71&center=true&vCenter=true&width=800&lines=AI-powered+Nutrition+%26+Health+Tracking+App;Non-Invasive+Deficiency+Detection;AR+Food+Analysis+%7C+Voice+Logging+%7C+AI+Doctor;Built+with+Flutter+%26+Groq+AI" />
+
+<br/>
+
+<p align="center">
+  <b>Designed & Developed by</b><br/>
+  <b style="font-size:20px;">Dharun2712</b><br/>
+  📧 <a href="mailto:dharunkumarm2005@gmail.com">dharunkumarm2005@gmail.com</a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=wave&color=gradient&height=120&section=footer"/>
+
+</div>
 
 <div align="center">
 
