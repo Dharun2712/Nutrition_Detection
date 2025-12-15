@@ -931,14 +931,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Medical advisors for nutritional guidance
 
 ---
+---
 
-## 📞 Support
+## 📞 Support & Contact
 
-For issues, questions, or suggestions:
+<div align="center">
 
-- 📧 Email: support@nutritionapp.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/nutrition-deficiency-detector/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/nutrition-deficiency-detector/discussions)
+<img src="https://readme-typing-svg.herokuapp.com?font=Roboto&size=20&pause=1000&color=E74C3C&center=true&vCenter=true&width=650&lines=Need+Help%3F+Have+Questions%3F;Open+to+Collaboration+and+Hackathons!" />
+
+<br/>
+
+📧 **Email:**  
+<a href="mailto:dharunkumarm2005@gmail.com"><b>dharunkumarm2005@gmail.com</b></a>
+
+🐛 GitHub Issues – Bug reports & feature requests  
+💬 GitHub Discussions – Ideas & improvements  
+
+<b>Maintained by Dharun2712</b>
+
+</div>
+
+---
+Discussions: [GitHub Discussions](https://github.com/yourusername/nutrition-deficiency-detector/discussions)
 
 ---
 
