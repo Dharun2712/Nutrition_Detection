@@ -933,23 +933,24 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 ---
 
-## 📞 Support & Contact
-
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Roboto&size=20&pause=1000&color=E74C3C&center=true&vCenter=true&width=650&lines=Need+Help%3F+Have+Questions%3F;Open+to+Collaboration+and+Hackathons!" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=2"/>
 
 <br/>
 
-📧 **Email:**  
-<a href="mailto:dharunkumarm2005@gmail.com"><b>dharunkumarm2005@gmail.com</b></a>
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&pause=1200&color=2ECC71&center=true&vCenter=true&width=700&lines=Designed+%26+Developed+by+Dharun2712;AI-powered+Healthcare+Innovation;Made+with+❤️+using+Flutter+%26+Groq+AI" />
 
-🐛 GitHub Issues – Bug reports & feature requests  
-💬 GitHub Discussions – Ideas & improvements  
+<br/>
 
-<b>Maintained by Dharun2712</b>
+📧 <a href="mailto:dharunkumarm2005@gmail.com">dharunkumarm2005@gmail.com</a>
+
+<br/><br/>
+
+⭐ **Star this repository if you find it useful!**
 
 </div>
+
 
 ---
 Discussions: [GitHub Discussions](https://github.com/yourusername/nutrition-deficiency-detector/discussions)
